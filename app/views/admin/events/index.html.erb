@@ -1,0 +1,33 @@
+<h1>Listing events</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Active</th>
+      <th>Starts on</th>
+      <th>Ends on</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @events.each do |event| %>
+      <tr>
+        <td><%= event.name %></td>
+        <td><%= event.active %></td>
+        <td><%= event.starts_on %></td>
+        <td><%= event.ends_on %></td>
+        <td><%= link_to 'Show', [:admin, event] %></td>
+        <td><%= link_to 'Edit', edit_admin_event_path(event) %></td>
+        <td><%= link_to 'Destroy', [:admin, event], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event', new_admin_event_path %>

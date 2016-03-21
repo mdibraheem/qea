@@ -1,3 +1,48 @@
-<%- @events.each do |event| %>
-  <%= link_to event.name, event %>
-<%end%>
+<div class="container">
+
+  <div class="starter-template">
+    <div class="row">
+      <div class="col-lg-2">
+        <%= image_tag 'cltSpartan.png', width: '150px', height: 'auto' %>
+      </div>
+      <div class="col-lg-10">
+        <p class="lead text-left">Welcome to the home of the Carolina Spartans!  <br />
+          We are excited to announce the 2016 MLS season is about to begin.  We hope to<br />
+          continue from last year's winning debut season and come home with the Cup.  <br />
+          Be sure to checkout our events page for upcoming games.</p>
+      </div>
+      </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <h2>AVAILABLE EVENTS</h2>
+      <hr />
+    </div>
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="col-lg-6">
+            <p style="font-weight: bold;">Name</p>
+          </div>
+          <div class="col-lg-6">
+            <p>Starting Date</p>
+          </div>
+          <% @events.each do |event| %>
+            <div class="col-lg-6">
+              <%=link_to event.name, event%>
+            </div>
+            <div class="col-lg-6">
+              <p><%=event.starts_on.strftime('%b %d %Y')%></p>
+            </div>
+          <%end%>
+        </div>
+        <div class="col-lg-6">
+          <p>
+            We are excited to bring you 4 events in 2016.  Events range from different soccer tournaments to children's camps.
+            All of the events are family friendly and we are hoping to see you all out at the park.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /.container -->

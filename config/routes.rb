@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  root 'pages#home'
+  root 'events#index'
 
   resources :events, only: [:show, :index]
+
+  namespace :admin do
+    resources :events, :packages
+  end
 end

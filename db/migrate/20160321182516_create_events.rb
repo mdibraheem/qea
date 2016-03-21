@@ -1,8 +1,8 @@
 class CreateEvents < ActiveRecord::Migration
   def change
     create_table :events do |t|
-      t.boolean :active
       t.string :name
+      t.boolean :active
       t.datetime :starts_on
       t.datetime :ends_on
 

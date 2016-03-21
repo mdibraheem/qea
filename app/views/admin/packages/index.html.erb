@@ -1,0 +1,27 @@
+<h1>Listing packages</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @packages.each do |package| %>
+      <tr>
+        <td><%= package.name %></td>
+        <td><%= link_to 'Show', [:admin, package] %></td>
+        <td><%= link_to 'Edit', edit_admin_package_path(package) %></td>
+        <td><%= link_to 'Destroy', [:admin, package], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Package', new_admin_package_path %>

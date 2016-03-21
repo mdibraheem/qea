@@ -1,0 +1,1 @@
+json.extract! @event, :name, :active, :starts_on, :ends_on, :created_at, :updated_at
