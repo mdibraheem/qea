@@ -21,20 +21,22 @@
     <div class="col-lg-12">
       <div class="row">
         <div class="col-lg-6">
-          <div class="col-lg-6">
-            <p style="font-weight: bold;">Name</p>
-          </div>
-          <div class="col-lg-6">
-            <p>Starting Date</p>
-          </div>
-          <% @events.each do |event| %>
-            <div class="col-lg-6">
-              <%=link_to event.name, event%>
-            </div>
-            <div class="col-lg-6">
-              <p><%=event.starts_on.strftime('%b %d %Y')%></p>
-            </div>
-          <%end%>
+          <table class="table">
+            <tr>
+              <th>Name</th>
+              <th>Starting Date</th>
+            </tr>
+            <% @events.each do |event| %>
+            <tr>
+              <td>
+                <%=link_to event.name, event%>
+              </td>
+              <td>
+                <%=event.starts_on.strftime('%b %d %Y')%>
+              </td>
+            </tr>
+            <%end%>
+          </table>
         </div>
         <div class="col-lg-6">
           <p>
