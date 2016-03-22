@@ -8,28 +8,28 @@
 #
 Event.create([
   {
-    name: 'Winter Cup',
+    name: 'Family Week',
     active: true,
-    starts_on: '8 Dec 2016',
-    ends_on:  '15 Dec 2016'
+    starts_on: 3.months.from_now,
+    ends_on:  3.months.from_now + 1.week
   },
   {
-    name: 'Summer Invitational Tournament',
+    name: 'Invitational Tournament',
     active: true,
-    starts_on: '1 Jul 2016',
-    ends_on: '28 Jul 2016'
+    starts_on: 5.months.ago,
+    ends_on: 5.months.ago + 2.weeks
   },
   {
     name: 'Kids Summer Camp',
     active: true,
-    starts_on: '10 Aug 2016',
-    ends_on:  '21 Aug 2016'
+    starts_on: 5.months.from_now,
+    ends_on:  5.months.from_now + 1.week
   },
   {
     name: 'Rivalry Week',
     active: false,
-    starts_on: '20 Sep 2016',
-    ends_on:  '10 Oct 2017'
+    starts_on: 1.week.ago,
+    ends_on:  Time.now
   }
 ])
 
