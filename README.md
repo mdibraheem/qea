@@ -17,7 +17,6 @@ This is an assessment for potential Quint Events developers
 ### Important Information ###
   1. There is already an admin section for adding/editing packages and events.  To view this go to localhost:3000/admin/events or /admin/packages
   2. The most important part of this assessment is the functionality not the styling.  It's not important to get the styling just right when you are adding to the views
-  3. If you have any questions please email splybon@quintevents.com
 
 ### Complete the following Tasks ###
 1. Add an association on packages and events.
