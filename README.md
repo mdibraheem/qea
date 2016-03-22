@@ -6,7 +6,7 @@ This is an assessment for potential Quint Events developers
 
 ### How do I get set up? ###
 
-* Fork this repository to your local machine
+* Fork this repository
 * Feel free to edit the config/database.yml file to make it work on your machine
 * Run the following commands to set up your DB
     1. ```rake db:create```
