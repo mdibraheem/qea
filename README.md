@@ -30,7 +30,7 @@ This is an assessment for potential Quint Events developers
 6. On the event show page replace the placeholder below the Packages to include information about the packages.
     * Use the provided mockup to show all of the packages for that particular event.  
     * For each package show the name and description
-7. On the right side of the event show page, create a form for an InfoForm.  This should post to the InfoFormController on the create action.
+7. On the right side of the event show page, create a form for an InfoForm.  This should post to the InfoFormsController on the create action.
     * You will have to edit the routes.rb file to allow for this
     * The create action should add the InfoForm to the database
     * After adding the InfoForm to the DB, redirect back to the home page
