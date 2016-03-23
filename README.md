@@ -18,7 +18,7 @@ This is an assessment for potential Quint Events developers
   2. The most important part of this assessment is the functionality not the styling.  It's not important to get the styling just right when you are adding to the views
 
 ### Complete the following Tasks ###
-1. On the root page, organize the events in order of the starting date.  Do this in the events controller.
+1. On the root page, organize the events in order of the starting date.  Also only select events where the active attribute is set to true.
 2. On the root page, add a column to the events table called 'Days Until Start'.  This will show how many days are left until the event starts.  However, if the event has already passed the table should say 'The event has passed'.
     * Use the provided mockup to see what it should look like.
 3. Add an association on packages and events.
