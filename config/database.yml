@@ -11,3 +11,8 @@ staging:
 
 production:
   <<: *defaults
+
+test:
+  <<: *defaults
+  database: qea_test
+
