@@ -1,2 +1,2 @@
-class Package < ActiveRecord::Base
+class Package < ApplicationRecord
 end

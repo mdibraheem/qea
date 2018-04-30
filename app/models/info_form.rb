@@ -1,2 +1,2 @@
-class InfoForm < ActiveRecord::Base
+class InfoForm < ApplicationRecord
 end
