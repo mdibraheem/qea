@@ -20,7 +20,7 @@ This is an assessment for potential Quint Events developers
 2. On the package pages in the admin section *(/admin/packages)*. Provide a dropdown showing all the events.  You should be able to select an event and then have that package be associated with that event using the association you created in step #1.  
     * This includes information on the index page, the form partial, and the show page.
 3. Add a field on the package table called description.  This represents a short description of the package.
-    * After you do this, make sure to add a description to the views in the admin section so that you can edit and view this field.
+    * After you do this, make sure to add this field to the views in the admin section so that you can edit and view this field.
 4. On the event show page replace the placeholder below the Packages to include information about the packages.
     * Use the provided mockup to show all of the packages for that particular event.  
     * For each package show the name and description
