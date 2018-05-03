@@ -27,3 +27,5 @@ This is an assessment for potential Quint Events developers
 5. In the admin section at *admin/events*, make the events sortable via drag and drop.  Then display the events in that order on the front end on the home page.  
     * You may use any frontend library to do drag and drop but **do not** use any rails gems to handle this server side.
 6. Write a test for the functionality for sorting events.  Minitest is already setup, but feel free to use whatever test library you prefer.
+
+### After you have completed the tasks, make a pull request back to the original repository so we can see your changes ###
