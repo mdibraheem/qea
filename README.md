@@ -17,7 +17,7 @@ This is an assessment for potential Quint Events developers
 ### Complete the following Tasks ###
 1. Add an association on packages and events.
     * Events have many packages, and packages have one event
-2. On the package pages in the admin section *(/admin/packages)*. Provide a dropdown showing all the events.  You should be able to select an event and then have that package be associated with that event, using the association you created in step #2.  
+2. On the package pages in the admin section *(/admin/packages)*. Provide a dropdown showing all the events.  You should be able to select an event and then have that package be associated with that event using the association you created in step #1.  
     * This includes information on the index page, the form partial, and the show page.
 3. Add a field on the package table called description.  This represents a short description of the package.
     * After you do this, make sure to add a description to the views in the admin section so that you can edit and view this field.
