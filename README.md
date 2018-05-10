@@ -7,6 +7,7 @@ This is an assessment for potential Quint Events developers
 ### How do I get set up? ###
 * Fork this repository
 * Feel free to edit the config/database.yml file to make it work on your machine
+* Run ``` bundle install```
 * Run ``` rails db:setup ```
 * Run rails s and go to localhost:3000 to see if your app if running
 
