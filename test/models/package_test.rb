@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class PackageTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test "package has event association" do
+    event = Event.new
+    package = Package.new(event: event)
+    assert_equal package.event, event
+  end
 end
