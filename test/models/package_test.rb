@@ -6,4 +6,8 @@ class PackageTest < ActiveSupport::TestCase
     package = Package.new(event: event)
     assert_equal package.event, event
   end
+
+  test "package can have a description" do
+    assert_respond_to Package.new, :description
+  end
 end
