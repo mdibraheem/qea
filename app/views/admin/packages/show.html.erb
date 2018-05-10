@@ -4,6 +4,10 @@
   <strong>Name:</strong>
   <%= @package.name %>
 </p>
+<p>
+  <strong>Event:</strong>
+  <%= @package.event %>
+</p>
 
 <%= link_to 'Edit', edit_admin_package_path(@package) %> |
 <%= link_to 'Back', admin_packages_path %>

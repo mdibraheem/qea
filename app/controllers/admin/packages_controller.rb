@@ -4,7 +4,7 @@ class Admin::PackagesController < ApplicationController
   # GET /admin/packages
   # GET /admin/packages.json
   def index
-    @packages = Package.all
+    @packages = Package.includes(:event).all
   end
 
   # GET /admin/packages/1
@@ -69,6 +69,6 @@ class Admin::PackagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def package_params
-      params.require(:package).permit(:name)
+      params.require(:package).permit(:name, :event_id)
     end
 end
