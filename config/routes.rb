@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   resources :events, only: [:show, :index]
 
   namespace :admin do
-    resources :events, :packages
+    resources :events do
+      collection { put :sort }
+    end
+    resources :packages
   end
 end

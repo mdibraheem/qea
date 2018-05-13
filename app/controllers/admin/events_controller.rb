@@ -4,7 +4,7 @@ class Admin::EventsController < ApplicationController
   # GET /admin/events
   # GET /admin/events.json
   def index
-    @events = Event.all
+    @events = Event.ordered.all
   end
 
   # GET /admin/events/1
@@ -61,14 +61,23 @@ class Admin::EventsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_event
-      @event = Event.find(params[:id])
-    end
+  def sort
+    Event.sort(event_order_params)
+    head :ok
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def event_params
-      params.require(:event).permit(:name, :active, :starts_on, :ends_on)
-    end
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_event
+    @event = Event.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def event_params
+    params.require(:event).permit(:name, :active, :starts_on, :ends_on)
+  end
+
+  def event_order_params
+    params[:event_ids].map(&:to_i)
+  end
 end

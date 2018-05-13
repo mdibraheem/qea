@@ -13,9 +13,9 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody id="sortable" data-sort-url="<%= sort_admin_events_path %>">
     <% @events.each do |event| %>
-      <tr>
+      <tr id="<%= event.id %>">
         <td><%= event.name %></td>
         <td><%= event.active %></td>
         <td><%= event.starts_on %></td>
@@ -31,3 +31,16 @@
 <br>
 
 <%= link_to 'New Event', new_admin_event_path %>
+
+<script type="application/javascript">
+    $("#sortable").sortable({
+        update: function (event, ui) {
+            var sortedIDs = $(this).sortable("toArray");
+            $.ajax({
+                url: $(this).data("sort-url"),
+                type: "PUT",
+                data: { event_ids: sortedIDs }
+            });
+        }
+    });
+</script>

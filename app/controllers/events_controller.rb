@@ -4,6 +4,6 @@ class EventsController < ApplicationController
   end
 
   def index
-    @events = Event.all
+    @events = Event.ordered.all
   end
 end
